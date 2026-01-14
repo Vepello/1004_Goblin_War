@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'distantGalaxy';
+  src: url('Fonts/SF_Distant_Galaxy/Distant_Galaxy.woff') format('woff');
+  font-display: swap;
+}
+
+@keyframes bounce {
+    0%{bottom: 0px;}
+    25%{bottom: 10px;}
+    75%{bottom: -5px;}
+    100%{bottom : 0px;}
+}
+
+@keyframes LoadFade{
+    0%{background-color: #87ceeb;}
+    20%{background-color: black;}
+    80%{background-color: black;}
+    100%{background-color: #87ceeb;}
+}
+
+@keyframes HoldFade{
+    0% {opacity: 0;}
+    25%{opacity: 1;}
+    75%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+#home{
+    background-color: #001e3d;
+}
+
+#gameTitle{
+    font-family: 'distantGalaxy';
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgb(81, 190, 81), rgb(35, 126, 59) 52% /*#ffa500, #db8700*/);
+    color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 0.7px white;
+    font-size: 50;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+#gameTitle:hover{
+    font-size: 55;
+    margin-top: 15px;
+}
+
+#game{
+    margin: 50px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+#gameCont{
+    height: 90vh;
+}
+
+#ToggleFullscreenBtn{
+    position: absolute;
+    left:auto;
+    right:30px;
+    top:auto;
+    bottom: 25px;;
+    width: 30px;
+    height: 30px;
+    object-position: 95% 95%;
+    opacity: 0.4;
+}
+
+#ToggleFullscreenBtn:hover{
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+}
+
+#HomeLogo{
+    position: relative;
+    animation: bounce 0.85s ease infinite;
+}
+
+#playBtn{
+    margin-top: 70px;
+}
+
+#BackBtn{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#savesMenu{
+    width: 80%;
+    height: 80vh;
+}
+
+#LevelsMenu{
+    width: 80%;
+    height: 80vh;
+}
+
+.menu_elem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+
+.button{
+    margin-top: 30px;
+    background-color: #415c8e;
+    color: #0ebfad;
+    -webkit-text-stroke: 0.3px rgb(26, 99, 159);
+    font-family: distantGalaxy;
+    font-weight: bold;
+    width: 20%;
+    height: 10%;
+    border: 2px solid #344368;
+    border-radius: 10px;
+    font-size: 2vw;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0.5px #344368, 0 0 5px 0.5px #344368 inset;
+}
+
+.button:hover{
+    background-color: #293b5c;
+    color: #0c9486;
+    border: 2px solid #5d76b7;
+    
+}
+
+.button:active{
+    background-color: #192438;
+    color: #074b45;
+}
+
+.menuBG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 0;
+    background-color: #9c6940;
+    border: 3px #49311e;
+    box-shadow: 0 0 5px 0.5px #49311e, 0 0 5px 0.5px #654429 inset;
+    overflow-y: auto;
+}
+
+.LevelNot{
+    color: white;
+    font-family: distantGalaxy;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 60;
+    opacity: 0;
+    margin-bottom: 0;
+}
+
+.LevelBG{
+    width: 100%;
+    height: 100vh;
+}
