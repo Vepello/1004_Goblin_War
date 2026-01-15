@@ -6,16 +6,21 @@
         <link rel = "icon" type = "image/x-icon" href="Images/Goblin Idle.gif">
     </head>
 
-    <body id="home" onload="gameLoad()">
+    <body id="home" onload="level1()">
         <div id="gameTitle">
             <p>The<br>Great Goblin<br>War</p>
         </div>
 
         <div id="game">
             <div id="gameCont">
-                
+                <img class='LevelBG' id='Level1BG' src='Images/Level_1_Map.png'>
+                <img class='CoinCnt' id='lvl1Coins' src='Images/Coin.png'>
+                <img class='PlayHp' id='lvl1Hp' src='Images/Heart.png'>
+                <p class='CoinsTxt' id='lvl1CoinsTxt'></p>
+                <p class='HpTxt' id='lvl1HpTxt'></p>
+                <p class='CurrentWave' id='lvl1CurrentWave'></p>
             </div>
-            <img id="ToggleFullscreenBtn" title="toggle fullscreen" src="Images/Open Fullscreen.png" onclick="ToggleFullscreen()">
+            <img id="ToggleFullscreenBtn" title="toggle fullscreen" src="Images/Open_Fullscreen.png" onclick="ToggleFullscreen()">
         </div>
     </body>
 </html>
