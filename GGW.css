@@ -32,10 +32,11 @@
 }
 
 @keyframes lvl1Path {
-    0% {top: -10%; left: 29%;}
+    0% {top: -10%; left: 29%; transform: scaleX(-1);}
     32% {top: 38%; left: 29%;}
     56% {top: 38%; left: 67%;}
-    72% {top: 63%; left: 67%;}
+    71.9% {transform: scaleX(-1);}
+    72% {top: 63%; left: 67%; transform: scaleX(1);}
     80% {top: 63%; left: 54%;}
     100% {top: 110%; left: 54%;}
 }
@@ -117,6 +118,13 @@
     height: 80vh;
 }
 
+#ColourSelBg{
+    width: 80%;
+    height: 80vh;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
 #LevelsMenu{
     width: 80%;
     height: 80vh;
@@ -174,6 +182,11 @@
     left: 64.6%;
 }
 
+#ConfirmColoursBtn{
+    bottom: 5vh;
+    right: 2vw;
+}
+
 /*#endregion*/
 
 .menu_elem{
@@ -223,6 +236,7 @@
     border: 3px #49311e;
     box-shadow: 0 0 5px 0.5px #49311e, 0 0 5px 0.5px #654429 inset;
     overflow-y: auto;
+    position: relative;
 }
 
 .LevelNot{
@@ -293,6 +307,13 @@
     height: auto;
 }
 
+.BirthedGremlin{
+    position: absolute;
+    animation: lvl1Path 10s linear both;
+    width: 100px;
+    height: auto;
+}
+
 .Arrow{
     width: 20px;
     height: auto;
@@ -325,6 +346,61 @@
     left: 16%;
     height: 50px;
     width: auto;
+}
+
+.ColourMenu{
+    font-family: distantGalaxy;
+    color: black;
+    font-size: 20;
+}
+
+.ColourSelBtn{
+    height: 10vh;
+    width: auto;
+    margin: 2vw;
+}
+
+.ColourSelBtn:hover{
+    height: 12vh;
+    margin: 1vw;
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.ColourSelBtn:active{
+    filter: brightness(20%);
+}
+
+.SelectedColourBtn{
+    height: 12vh;
+    width: auto;
+    margin: 1vw;
+    outline: yellow;
+}
+
+.SelectedColourBtn:hover{
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.SelectedColourBtn:active{
+    filter: brightness(20%);
+}
+
+.ProceedBtn{
+    height: 5vh;
+    width: auto;
+    position: absolute;
+    transform: scaleX(-1);
+}
+
+.ProceedBtn:hover{
+    cursor: pointer;
+    filter: brightness(50%);
+}
+
+.ProceedBtn:active{
+    filter: brightness(20%);
 }
 
 .HpTxt {
