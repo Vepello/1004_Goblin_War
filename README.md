@@ -1,3 +1,5 @@
+To play the game, ensure all files are saved to the same directory and load "GGW.html"
+
 The Great Goblin War is a tower defence game.
 When you load a level for the first time you will be asked to choose your unit's colours, as well as your enemy's. You can change this at any point in the 'settings' menu.
 The 'Play' button will load your most recently unlocked level, if you would like to choose a specific level, you can use the 'level select' button to load any unlocked level.
