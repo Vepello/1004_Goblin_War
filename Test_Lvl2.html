@@ -1,0 +1,31 @@
+<html>
+    <link rel = "stylesheet" href="GGW.css">
+
+    <head>
+        <title>Great Goblin War</title>
+        <link rel = "icon" type = "image/x-icon" href="Images/Goblin Idle.gif">
+    </head>
+
+    <body id="home" onload="level2()" onkeypress="DevTools(2,this,event)">
+        <div id="gameTitle">
+            <p>The<br>Great Goblin<br>War</p>
+        </div>
+
+        <div id="game">
+            <div id="gameCont">
+                <img class='LevelBG' id='Level2BG' src='Images/Level_2_Map.png'>
+                <img class='CoinCnt' id='lvl2Coins' src='Images/Coin.png'>
+                <img class='PlayHp' id='lvl2Hp' src='Images/Heart.png'>
+                <p class='CoinsTxt' id='lvl2CoinsTxt'></p>
+                <p class='HpTxt' id='lvl2HpTxt'></p>
+                <p class='CurrentWave' id='lvl2CurrentWave'></p>
+            </div>
+            <img id="ToggleFullscreenBtn" title="toggle fullscreen" src="Images/Open_Fullscreen.png" onclick="ToggleFullscreen()">
+        </div>
+    </body>
+    <audio id='region1bgMusic' src='Audio/bensound-jazzyfrenchy.mp3' loop></audio>
+    <audio id='letterbgMusic' src='Audio/bensound-sadday.mp3' loop></audio>
+    <audio id="letter1VA" src = 'Audio/GoblinLetter1.wav'></audio>
+</html>
+
+<script src="GGW.js"></script>
