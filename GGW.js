@@ -1626,8 +1626,9 @@ function WaveProgress(a,b,c){
   TotalActive = ActiveGoblins + ActiveGremlins
       if (TotalActive == 0){
         if (CurrentLvlWaves > 5){
-          lvlsUnl++;
-          let WaveComp = document.createElement('div');
+          if (lvlsUnl < c){
+            lvlsUnl++;
+          } let WaveComp = document.createElement('div');
           WaveComp.className = 'WaveCompMsg';
           WaveComp.id = 'WaveCompMsg';
           gameInner.appendChild(WaveComp);
