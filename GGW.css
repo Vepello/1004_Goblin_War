@@ -4,10 +4,22 @@
   font-display: swap;
 }
 
+@font-face{
+    font-family: 'adelia';
+    src: url('Fonts/adelia_3/adelia.ttf');
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'pixel';
     src: url('Fonts/Pixel/BoldPixels.ttf');
     font-display: swap;
+}
+
+@keyframes FadeLoop {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
 }
 
 @keyframes bounce {
@@ -31,6 +43,17 @@
     100%{opacity: 0;}
 }
 
+@keyframes DelayedFadeIn{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes FadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
 @keyframes lvl1Path {
     0% {top: -10%; left: 29%; transform: scaleX(-1);}
     32% {top: 38%; left: 29%;}
@@ -41,11 +64,37 @@
     100% {top: 110%; left: 54%;}
 }
 
+@keyframes lvl2PathL {
+    0% {top: -10%; left: 53.125%;}
+    16.66% {top: 12.5%; left: 40.625%;}
+    24.99% {top: 28.125%; left: 40.625%;}
+    33.32% {top: 28.125%; left: 25%}
+    41.65% {top: 37.5%; left: 15.625%;}
+    58.31% {top: 65.625%; left: 15.625%;}
+    66.64% {top: 78.125%; left: 28.125%;}
+    74.97% {top: 78.125%; left: 40.625%;}
+    100% {top: 110%; left: 40.625%;}
+}
+
+@keyframes lvl2PathR {
+    0% {top: -10%; left: 53.125%;}
+    16.66% {top: 12.5%; left: 40.625%;}
+    24.99% {top: 28.125%; left: 40.625%;}
+    33.32% {top: 28.125%; left: 50%}
+    41.65% {top: 37.5%; left: 65.625%;}
+    58.31% {top: 65.625%; left: 65.625%;}
+    66.64% {top: 78.125%; left: 50%;}
+    74.97% {top: 78.125%; left: 40.625%;}
+    100% {top: 110%; left: 40.625%;}
+}
+
 #home{
     background-color: #001e3d;
+    z-index: 0;
 }
 
 #gameTitle{
+    position: fixed;
     font-family: 'distantGalaxy';
     text-align: center;
     background-image: linear-gradient(to bottom, rgb(81, 190, 81), rgb(35, 126, 59) 52% /*#ffa500, #db8700*/);
@@ -53,12 +102,16 @@
     background-clip: text;
     -webkit-text-stroke: 0.7px white;
     font-size: 50;
-    width: fit-content;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
     margin-top: 30px;
     transition: 0.5s;
+    z-index: 100;
+    background-color: #001e3d;
+    height: 30%;
+    left: 0%;
 }
 
 #gameTitle:hover{
@@ -67,19 +120,34 @@
 }
 
 #game{
-    margin: 50px;
-    height: 60vh;
+    left: 10%;
+    right: 10%;
+    height: 60%;
+    width: auto;
     overflow-y: auto;
+    position: fixed;
+    bottom: 2%;
+}
+
+#HideFixed{
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    background-color: #001e3d;
+    height: 38%;
+    top: 0%;
+    z-index: 50;
 }
 
 #gameCont{
     position: relative;
     height: 100vh;
     overflow: hidden;
+    z-index: 0;
 }
 
 #ToggleFullscreenBtn{
-    position: absolute;
+    position: fixed;
     left:auto;
     right:30px;
     top:auto;
@@ -113,6 +181,10 @@
     height: 30px;
 }
 
+#BackBtn:hover{
+    cursor: pointer;
+}
+
 #savesMenu{
     width: 80%;
     height: 80vh;
@@ -130,7 +202,22 @@
     height: 80vh;
 }
 
+#SettingsMenu{
+    width: 80%;
+    height: 80vh;
+}
+
+#ClrStrBtn{
+    width: fit-content;
+}
+
+#MainMenuBtns{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
 /*#region Tower positions*/
+/*#region Level 1*/
 
 #Tower0ContLvl1{
     top: 13.4%;
@@ -182,12 +269,102 @@
     left: 64.6%;
 }
 
+/*#endregion*/
+
+#Tower0ContLvl2{
+    top: 12.5%;
+    left: 25%;
+}
+
+#Tower1ContLvl2{
+    top: 18.75%;
+    left: 6.25%;
+}
+
+#Tower2ContLvl2{
+    top: 18.75%;
+    left: 68.75%;
+}
+
+#Tower3ContLvl2{
+    top: 37.5%;
+    left: 37.5%;
+}
+
+#Tower4ContLvl2{
+    top: 40.75%;
+    left: 0%;
+}
+
+#Tower5ContLvl2{
+    top: 40.75%;
+    left: 75%;
+}
+
+#Tower6ContLvl2{
+    top: 50%;
+    left: 25%;
+}
+
+#Tower7ContLvl2{
+    top: 50%;
+    left: 50%;
+}
+
+#Tower8ContLvl2{
+    top: 59.5%;
+    left: 0%;
+}
+
+#Tower9ContLvl2{
+    top: 59.5%;
+    left: 75%;
+}
+
+#Tower10ContLvl2{
+    top: 62.5%;
+    left: 37.5%;
+}
+
+#Tower11ContLvl2{
+    top: 81.25%;
+    left: 6.25%;
+}
+
+#Tower12ContLvl2{
+    top: 81.25%;
+    left: 68.75%;
+}
+
+#Tower13ContLvl2{
+    top: 87.5%;
+    left: 25%;
+}
+
+#Tower14ContLvl2{
+    top: 87.5%;
+    left: 50%;
+}
+
+/*#endregion*/
+
+#ContinueLvl1{
+    font-family: pixel;
+    color: black;
+    font-size: 20;
+    position: absolute;
+    bottom: 10%;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    animation: FadeLoop 2s infinite both;
+    z-index: 11;
+}
+
 #ConfirmColoursBtn{
     bottom: 5vh;
     right: 2vw;
 }
-
-/*#endregion*/
 
 .menu_elem{
     display: block;
@@ -195,6 +372,10 @@
     margin-right: auto;
     width: 50%;
     height: auto;
+}
+
+.lvlbtn{
+    filter: brightness(50%);
 }
 
 .button{
@@ -269,6 +450,7 @@
     animation: bounce 0.85s ease infinite;
     width: 50%;
     height: auto;
+    z-index: 0;
 }
 
 .buildBtn:hover{
@@ -276,10 +458,37 @@
     cursor: pointer;
 }
 
+.activeTower{
+    z-index: 1;
+}
+
+.activeTower:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
 .BowTow{
     position: relative;
     width: 50%;
     height: 90%;
+}
+
+.MeleeTow{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.SightRange{
+    position: absolute;
+    /*width: 200%;
+    height: 200%;*/
+    background-color: rgba(128, 128, 128,0.5);
+    border-radius: 1000px;
+}
+
+.activeTower:hover .SightRange{
+    visibility: visible;
 }
 
 .callWaveBtn{
@@ -302,16 +511,29 @@
 
 .BirthedGoblin{
     position: absolute;
-    animation: lvl1Path 25s linear both;
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 10%;
 }
 
 .BirthedGremlin{
     position: absolute;
+    width: auto;
+    height: 10%;
+}
+
+.lvl1Gremlin{
     animation: lvl1Path 10s linear both;
-    width: 100px;
-    height: auto;
+}
+
+.lvl2Gremlin{
+    animation: lvl2Path 10s linear both;
+}
+
+.TrainedGoblin{
+    position: fixed;
+    width: auto;
+    height: 10%;
+    z-index: 3;
 }
 
 .Arrow{
@@ -433,4 +655,135 @@
     font-weight: bold;
     font-size: 100;
     color: black;
+}
+
+.BuildMenuCont {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    text-align: center;
+    z-index: 10;
+    left: -20%;
+    top: -20%;
+}
+
+.BuildMenuWheel {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.buildBowBtn {
+    top: 10%;
+    left: 17%;
+}
+
+.buildMeleeBtn {
+    top: 10%;
+    right: 22%;
+}
+
+.buildMageBtn {
+    bottom: 10%;
+    left: 16%;
+}
+
+.buildBombBtn {
+    bottom: 10%;
+    right: 22%;
+}
+
+.UpgradeBtn{
+    left: 43.5%;
+    top: 5%
+}
+
+.RallyFlagBtn{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    z-index: 30;
+}
+
+.CancelBuildBtn {
+    top: 42%;
+    left: 43%;
+}
+
+.BuildMenuOpt {
+    position: absolute;
+    height: 20%;
+    width: auto;
+}
+
+.BuildMenuOpt:hover {
+    cursor: pointer;
+    filter: brightness(50%);
+}
+
+.BuildMenuOpt:active {
+    filter: brightness(20%);
+}
+
+.MovingFlag{
+    height: 7vh;
+    width: auto;
+    position: fixed;
+}
+
+.RallyFlag{
+    height: 7vh;
+    width: auto;
+    position: fixed;
+}
+
+.cutscene{
+    background-color: black;
+}
+
+.Background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: FadeIn 2s both;
+    background-color: black;
+}
+.LetterBg{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    top: 10%;
+    left: 10%;
+    animation: DelayedFadeIn 6s both;
+}
+
+.LetterContents{
+    position: absolute;
+    width: 50%;
+    height: 65%;
+    top: 17.5%;
+    left: 25%;
+    font-family: adelia;
+    font-size: 18;
+    animation: DelayedFadeIn 6s both;
+    z-index: 2;
+}
+
+.envelope{
+    position: fixed;
+    width:2%;
+    height: auto;
+    transition: 0.5s
+    z-index 10;
+}
+
+.envelope:hover{
+    cursor: pointer;
+    width: 3%;
+    filter: brightness(80%);
+    transition: 0.5s
 }
