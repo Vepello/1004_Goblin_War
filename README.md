@@ -9,3 +9,14 @@ Your money is displayed in the top left corner.
 when you are ready to play, click the blue 'play' button in the bottom left corner of the screen to call the next wave.
 
 There is currently no way to return to the main menu outside of refreshing the web page.
+
+All artwork by Alice Ireland and Alex Buck
+
+Music credits:
+Music by Bensound
+License code: VXOOL9YCPZ3NORGZ
+Artist: : Benjamin Tissot
+
+Music by: https://www.bensound.com
+License code: 9PTPRBN9RJ5RCWQG
+Artist: : Benjamin Tissot
